@@ -30,3 +30,7 @@ Route::get('/test', function () {
 Route::post('user/store', 'App\Http\Controllers\Api\UserController@store');
 Route::get('user/get/{flag}', [UserController::class, 'index']);
 Route::get('user/{id}', [UserController::class, 'show']);
+Route::get('showallusers', [UserController::class, 'showallusers']);
+Route::delete('user/delete/{id}', [UserController::class, 'destroy']);
+Route::put('user/update/{id}', [UserController::class, 'update']);
+Route::patch('user/change_password/{id}', [UserController::class, 'changepassword']);
